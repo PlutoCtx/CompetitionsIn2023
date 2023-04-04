@@ -45,13 +45,12 @@
 '''
     词云有形状
 '''
+import jieba
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
 # 示例代码
 from wordcloud import WordCloud
-from PIL import Image
-import numpy as np
-import matplotlib.pyplot as plt
-import jieba
-import pandas as pd
 
 # x, y = pd.read_excel('data.xlsx')
 # print(x)

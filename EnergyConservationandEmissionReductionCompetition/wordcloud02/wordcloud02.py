@@ -7,18 +7,12 @@
 # @User: chent
 
 
-import jieba  # 分词
-from wordcloud import WordCloud  # 词云图相关
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors  # 处理图片相关内容
-import numpy
-from PIL import Image
-
 import jieba
+import matplotlib.colors as colors  # 处理图片相关内容
 import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
 from wordcloud import WordCloud
+
 
 def trans_ch(txt):
   words = jieba.lcut(txt)

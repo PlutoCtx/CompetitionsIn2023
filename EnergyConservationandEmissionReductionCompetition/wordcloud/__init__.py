@@ -36,12 +36,12 @@
 '''
     词云有形状
 '''
+import jieba
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
 # 示例代码
 from wordcloud import WordCloud
-from PIL import Image
-import numpy as np
-import matplotlib.pyplot as plt
-import jieba
 
 # 打开文本
 with open("wordcloud/comments.txt", encoding="utf-8") as f:

@@ -6,10 +6,10 @@
 # @Software: PyCharm
 # @User: chent
 
-import numpy as np
+import random as rd
+
 import pandas as pd
 import pylab as pl
-import random as rd
 
 step = 0
 color = ['.r', '.g', '.b', '.y']

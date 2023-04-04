@@ -7,12 +7,11 @@
 # @User: chent
 
 
-import matplotlib.pyplot as plt  # 数据可视化
 import jieba  # 词语切割
-import wordcloud  # 分词
-from wordcloud import WordCloud, ImageColorGenerator, STOPWORDS  # 词云，颜色生成器，停止词
+import matplotlib.pyplot as plt  # 数据可视化
 import numpy as np  # 科学计算
 from PIL import Image  # 处理图片
+from wordcloud import WordCloud, ImageColorGenerator, STOPWORDS  # 词云，颜色生成器，停止词
 
 
 def ciyun():

@@ -6,9 +6,10 @@
 # @Software: PyCharm
 # @User: chent
 
+import random as rd
+
 import numpy as np
 import pylab as pl
-import random as rd
 
 step = 0
 color = ['.r', '.g', '.b', '.y']

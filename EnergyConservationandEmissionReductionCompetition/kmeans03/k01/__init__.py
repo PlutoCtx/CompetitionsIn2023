@@ -6,13 +6,11 @@
 # @Software: PyCharm
 # @User: chent
 
-# import kmeans
-import numpy as np
-import matplotlib.pyplot as plt
 from math import sqrt
 
-
-
+import matplotlib.pyplot as plt
+# import kmeans
+import numpy as np
 
 '''
 	度量距离，此处采用欧式距离

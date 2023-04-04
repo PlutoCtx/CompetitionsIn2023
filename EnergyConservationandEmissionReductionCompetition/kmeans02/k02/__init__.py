@@ -7,7 +7,6 @@
 # @User: chent
 
 
-import math
 import random
 
 f = open("kmeans.txt")
@@ -77,8 +76,6 @@ for i in range(k):  # 对k个种子点
 		if belong[j] == i:  # 如果是第i个聚类
 			x[i].append(a[j])
 			y[i].append(b[j])
-import numpy
-import matplotlib
 import pylab as pb
 
 for i in range(k):

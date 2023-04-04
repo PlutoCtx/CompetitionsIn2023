@@ -7,11 +7,7 @@
 # @User: chent
 
 # 导入鸢尾花数据，并重构数据框
-from sklearn.datasets import load_iris
-import os
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 
 # iris = load_iris()
 iris = pd.read_excel("kmeans.xlsx")

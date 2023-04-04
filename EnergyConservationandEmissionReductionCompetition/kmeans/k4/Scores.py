@@ -6,10 +6,10 @@
 # @Software: PyCharm
 # @User: chent
 
+import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
-import matplotlib.pyplot as plt
 
 df_features = pd.read_csv(r'julei.csv', encoding='gbk')
 

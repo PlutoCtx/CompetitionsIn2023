@@ -7,14 +7,13 @@
 # @User: chent
 
 
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.cluster import KMeans
-from scipy.spatial.distance import cdist
+import numpy as np
+import pandas as pd
 from pandas import DataFrame
+from scipy.spatial.distance import cdist
 from sklearn import metrics
+from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
 # 导入数据，默认第一行为索引，index_col设定第一列也为索引

@@ -118,11 +118,12 @@
 @FilePath: \learn\kmeans.py
 '''
 
-import xlrd
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import xlrd
 from sklearn.cluster import KMeans
+
 # 从Excel中读取数据存入数组
 rawData = xlrd.open_workbook('kmeans.xlsx')
 table = rawData.sheets()[0]
