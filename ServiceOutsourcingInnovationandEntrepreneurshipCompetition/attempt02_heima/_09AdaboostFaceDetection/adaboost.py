@@ -17,6 +17,7 @@ face_cascade.load('haarcascade_frontalface_alt2.xml')   # 一定要告诉编译�
 '''此文件是opencv的haar人脸特征分类器'''
 faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 for (x, y, w, h) in faces:
+    # 图片， 左上角坐标， 右下角坐标， 边框线的颜色， 边框线的宽度
     img = cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
     cv2.imshow('img', img)
     # cv2.imwirte('result/' + img,img)
