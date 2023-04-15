@@ -26,7 +26,7 @@ fourcc = cv2.VideoWriter_fourcc(*'XVID')
 # 常用的有“DIVX”、”MJPG”、“XVID”、“X264”。可用的列表在这里。
 
 # 推荐使用 ”XVID”，但一般依据你的电脑环境安装了哪些编码器。
-output_movie = cv2.VideoWriter('output.avi', fourcc, 25, (64, 360))
+output_movie = cv2.VideoWriter('output.mp4', fourcc, 25, (64, 360))
 # output_movie = cv2.VideoWriter('output.avi', fourcc， 29.97，(640，360))
 # Load some sample pictures and learn how to recognize them.
 lmm_image = face_recognition.load_image_file("man01.png")

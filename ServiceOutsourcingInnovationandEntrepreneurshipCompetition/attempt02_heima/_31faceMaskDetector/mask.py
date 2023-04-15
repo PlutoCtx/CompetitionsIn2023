@@ -1,23 +1,26 @@
+# @Version: python3.10
+# @Time: 2023/4/14 20:07
+# @Author: MaxBrooks
+# @Email: 15905898514@163.com
+# @File: mask.py
+# @Software: PyCharm
+# @User: chent
+
 import os
 import sys
 import random
-import argparse
 import numpy as np
 from PIL import Image, ImageFile
-
-
+import face_recognition
 
 BLUE_IMAGE_PATH = r"D:\ProgramingCodes\PycharmProjects\CompetitionsIn2023\ServiceOutsourcingInnovationandEntrepreneurshipCompetition\attempt02_heima\_31faceMaskDetector\mask.png"
 
 def create_mask(image_path):
     pic_path = image_path
     mask_path = BLUE_IMAGE_PATH
-    # mask path = "/media/preeth/Data/prajna files/mask creator/face mask/images/blue-mask.png
     show = False
     model = "hog"
     FaceMasker(pic_path, mask_path, show, model).mask()
-
-
 
 
 class FaceMasker:
@@ -28,40 +31,37 @@ class FaceMasker:
         self.mask_path = mask_path
         self.show = show
         self.model = model
-        # self._face_img: ImageFile = None
-        # self._mask_img: ImageFile = None
 
     def mask(self):
-        import face_recognition
 
         face_image_np = face_recognition.load_image_file(self.face_path)
         face_locations = face_recognition.face_locations(face_image_np, model=self.model)
         face_landmarks = face_recognition.face_landmarks(face_image_np, face_locations)
-        # 实现array到image的转换,返回image
+
         self._face_img = Image.fromarray(face_image_np)
         self._mask_img = Image.open(self.mask_path)
 
         found_face = False
+
         for face_landmark in face_landmarks:
-            # check whether facial features meet requirement
             skip = False
             for facial_feature in self.KEY_FACIAL_FEATURES:
                 if facial_feature not in face_landmark:
                     skip = True
                     break
+
             if skip:
                 continue
-                
-            # mask face
+
             found_face = True
             self._mask_face(face_landmark)
             
         if found_face:
             if self.show: 
                 self._face_img.show()
-                
-            # save
+
             self._save()
+
         else:
             print('Found no face.')
         
@@ -118,7 +118,6 @@ class FaceMasker:
         self._face_img.paste(mask_img, (box_x, box_y), mask_img)
 
     def _save(self):
-        # os.path.splitext(“文件路径”) 分离文件名与扩展名;默认返回(fname,fextension)元组，可做分片操作
         path_splits = os.path.splitext(self.face_path)
         new_face_path = path_splits[0] + '-with-mask' + path_splits[1]
         self._face_img.save(new_face_path)
@@ -136,5 +135,6 @@ class FaceMasker:
 
 
 if __name__ == '__main__':
+    img_path = "D:\ProgramingCodes\PycharmProjects\CompetitionsIn2023\ServiceOutsourcingInnovationandEntrepreneurshipCompetition\\attempt02_heima\_31faceMaskDetector\Downloads"
 
-    create_mask(image_path)
+    create_mask(img_path)
