@@ -85,10 +85,10 @@ def simplify_the_words_dict(dic):
 
 if __name__ == '__main__':
 
-    d01 = load_record('words_and_tests.p')  # 导入27000个已标记单词
-    d02 = load_record('words_and_tests.p')  # 导入27000个已标记单词
-
-    print(d01)
+    # d01 = load_record('words_and_tests01.p')  # 导入27000个已标记单词
+    # d02 = load_record('words_and_tests01.p')  # 导入27000个已标记单词
+    #
+    # print(d01)
     # d03 = load_record('frequency_qwertyuiop.p')  # 用户的单词，可能包括了不规则变形
     # d04 = load_record('frequency_qwertyuiop.p')  # 用户的单词，可能包括了不规则变形
     #
@@ -116,3 +116,6 @@ if __name__ == '__main__':
     #     print()
     #
     #
+    d = load_record('pickle/words_an_tests.p')
+
+
