@@ -9,3 +9,4 @@
 
 if __name__ == '__main__':
     print("test01")
+    print("test02")
