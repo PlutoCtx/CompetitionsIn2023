@@ -54,10 +54,11 @@ def merge_EnWords(d1, d2):
 
 
 if __name__ == '__main__':
-    d1 = load_record('words_and_tests (1).p')      # 原本的
-    d2 = load_record('words_and_tests.p')            # 打不开的原本的
+    # d1 = load_record('words_and_tests (1).p')      # 原本的
+    # d2 = load_record('words_and_tests.p')            # 打不开的原本的
+    #
+    # d3 = merge(d1, d2)
 
-    d3 = merge(d1, d2)
 
     # i = 0
     # for k in d3:
@@ -72,4 +73,46 @@ if __name__ == '__main__':
     # pickle.dump(d3, file)
     # file.close()
     # print(len(d3))
+    d = load_record('words_and_tests_enlarged__cleansing.p')
+    # if '***' in d:
+    #     d.pop('***')
+    #
+    # if '英语四级单词表（H）' in d:
+    #     d.pop('英语四级单词表（H）')
+    #     print('h')
+    #
+    # if '英语四级单词表（J、K）' in d:
+    #     d.pop('英语四级单词表（J、K）')
+    #     print('jk')
+    #
+    # if '语四级单词表（L）' in d:
+    #     print('语四级单词表（L）')
+    #     d.pop('语四级单词表（L）')
+    for k in d:
+        d[k] = list(set(d[k]))
+
+    file = open('words_and_tests_enlarged__cleansing.p', 'wb')
+    pickle.dump(d, file)
+    file.close()
+
+    # i = 0
+    # for k in d:
+    #     if i < 20000:
+    #         # print(i, k, d[k])
+    #         i += 1
+    #     elif i < 40000:
+    #         print(i, k, d[k])
+    #         i += 1
+    #     elif i < 60000:
+    #         # print(i, k, d[k])
+    #         i += 1
+    #     elif i < 80000:
+    #         # print(i, k, d[k])
+    #         i += 1
+    #     elif i < 100000:
+    #         # print(i, k, d[k])
+    #         i += 1
+    #     elif i < 120000:
+    #         # print(i, k, d[k])
+    #         i += 1
 

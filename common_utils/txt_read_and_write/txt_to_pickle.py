@@ -63,7 +63,30 @@ def merge_EnWords(d1, d2):
             d1[k] = d2[k]
     return d1
 
+
+# def txt_to_pickle02(path):
+#     f = open(path, encoding='utf-8', errors='ignore')
+#     d = {}
+#     for line in f:
+#         if line.strip() != "":
+#             temp = line.strip().split()
+#             d[temp[0]] = [tag]
+#
+#     file = open(tag + '.p', 'wb')
+#     pickle.dump(d, file)
+#     file.close()
+
+    # print("success")
+
+
 if __name__ == '__main__':
+
+    # f = open("words_and_test_enlarged.txt", encoding='utf-8', errors='ignore')
+    # d = {}
+    # for line in f:
+    #     if line.strip() != '':
+    #         temp = line.strip().split()
+    #         d[temp[0]] = [temp]
 
     # d_CET4 = load_record('CET4.p')
     # d_CET6 = load_record('CET6.p')
@@ -80,7 +103,7 @@ if __name__ == '__main__':
     # file = open('words_and_tests01.p', 'wb')
     # pickle.dump(result, file)
     # file.close()
-    d = load_record('words_ad_tests.p')
+    # d = load_record('words_ad_tests.p')
     # i = 0
     # for k in d:
     #     if d[k] == ['EnWords'] and i < 15000:
@@ -91,6 +114,10 @@ if __name__ == '__main__':
     # file = open('words_and_tests01.p', 'wb')
     # pickle.dump(d, file)
     # file.close()
+
+    d = load_record('')
+
+
 
 
 
