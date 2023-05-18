@@ -73,7 +73,7 @@ if __name__ == '__main__':
     # pickle.dump(d3, file)
     # file.close()
     # print(len(d3))
-    d = load_record('words_and_tests_enlarged__cleansing.p')
+    d = load_record('words_and_tests_enlarged__cleansing2.p')
     # if '***' in d:
     #     d.pop('***')
     #
