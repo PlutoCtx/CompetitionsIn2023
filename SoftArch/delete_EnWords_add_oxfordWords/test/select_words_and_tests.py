@@ -23,7 +23,7 @@ def load_pickle_file(pickle_name):
 if __name__ == '__main__':
     # 这个词库内包含了单词的词根，所以不需要对单词进行词根还原
     # 但其实有537个单词的词根不在这个词库里，大多数都是BBC的
-    d = load_pickle_file('my_words_and_tests2.pickle')
+    d = load_pickle_file('words_and_tests.p')
     stem = snowballstemmer.stemmer('english')
 
     print(len(d))
