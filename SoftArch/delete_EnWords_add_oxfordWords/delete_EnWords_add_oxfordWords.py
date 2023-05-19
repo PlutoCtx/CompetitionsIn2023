@@ -30,6 +30,6 @@ if __name__ == '__main__':
 
     i = 0
     for k in d:
-        # if stem.stemWord(k) not in d:
-        print(i, k, d[k])
-        i += 1
+        if stem.stemWord(k) != k:
+                print(i, k, stem.stemWord(k))
+                i += 1
