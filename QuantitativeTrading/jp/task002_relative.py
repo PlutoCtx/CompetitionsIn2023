@@ -9,21 +9,39 @@ import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 
-vegetables = [ 'turnover_ratio_of_account_payable', 'weighted_roe', 'opt_profit_div_income', 'before_tax_profit_div_income',
-             'current_ratio', 'net_profit_margin_on_sales', 'overall_assets_net_income_ratio','net_profit_growth_ratio','pb','market_cap']
+vegetables = [ "Gross Income Ratio",
+                "Accounts Receivable Turnover Rate",
+                "Asset Liability Ratio",
+                "PE",
+                "Net Profit Growth Rate",
+                "Return on Equity",
+                "Quick Ratio",
+                "Total Assets Turnover Rate",
+                "Operating Profit Ratio",
+                "Net Cash Flow Growth Rate"
+               ]
 
-farmers =  [ 'turnover_ratio_of_account_payable', 'weighted_roe', 'opt_profit_div_income', 'before_tax_profit_div_income',
-             'current_ratio', 'net_profit_margin_on_sales', 'overall_assets_net_income_ratio','net_profit_growth_ratio','pb','market_cap']
+farmers = [ "Gross Income Ratio",
+                "Accounts Receivable Turnover Rate",
+                "Asset Liability Ratio",
+                "PE",
+                "Net Profit Growth Rate",
+                "Return on Equity",
+                "Quick Ratio",
+                "Total Assets Turnover Rate",
+                "Operating Profit Ratio",
+                "Net Cash Flow Growth Rate"
+               ]
 
-harvest = np.array([[1,0.14,0.13,0.19,0.27,0.31,0.29,0.16,0.07,0.1],
+harvest = np.array([[1,0.14,0.13,0.16,0.27,0.31,0.29,0.16,0.62,0.1],
                     [0.14,1,0.28,0.21,0.05,0.71,0.69,0.07,0.51,0.07],
                     [0.13,0.28,1,0.52,0.16,0.13,0.08,0.11,0.15,0.08],
-                    [0.19,0.21,0.52,1,0.7,0.11,0.14,0.16,0.11,0.14],
+                    [0.16,0.21,0.52,1,0.7,0.11,0.14,0.16,0.66,0.14],
                     [0.27,0.05,0.16,0.7,1,0.07,0.08,0.11,0.12,0.11],
                     [0.31,0.71,0.13,0.11,0.07,1,0.61,0.64,0.11,0.094],
                     [0.29,0.69,0.08,0.14,0.08,0.61,1,0.71,0.07,0.11],
                     [0.16,0.07,0.11,0.16,0.11,0.64,0.71,1,0.13,0.14],
-                    [0.07,0.51,0.15,0.11,0.12,0.11,0.07,0.13,1,0.09],
+                    [0.62,0.51,0.15,0.66,0.12,0.11,0.07,0.13,1,0.09],
                     [0.1,0.07,0.08,0.14,0.11,0.094,0.11,0.14,0.09,1]])
 
 
@@ -44,6 +62,6 @@ for i in range(len(vegetables)):
         text = ax.text(j, i, harvest[i, j],
                        ha="center", va="center", color="w")
 
-ax.set_title("Financial factor relation matrix")
+ax.set_title("Financial factors' relation matrix")
 fig.tight_layout()
 plt.show()

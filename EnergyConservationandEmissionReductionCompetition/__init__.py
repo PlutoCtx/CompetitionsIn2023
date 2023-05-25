@@ -44,14 +44,14 @@ from PIL import Image
 from wordcloud import WordCloud
 
 # 打开文本
-with open("wordcloud/comments.txt", encoding="utf-8") as f:
+with open("wordcloud/past/comments.txt", encoding="utf-8") as f:
     s = f.read()
 
 # 中文分词
 text = ' '.join(jieba.cut(s))
 
 # 生成对象
-img = Image.open("wordcloud/picc.png") # 打开遮罩图片
+img = Image.open("wordcloud/past/picc.png") # 打开遮罩图片
 mask = np.array(img) #将图片转换为数组
 
 stopwords = ["我","你","她","的","是","了","在","也","和","就","都","这"]
